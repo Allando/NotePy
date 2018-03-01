@@ -3,39 +3,34 @@ import json
 
 
 class Notes:
-    def __init__(self):
+    @classmethod
+    def add_note(self, title, note):
+        # TODO: Check if file exists
+        # TODO: Get the highest id and add one as the new id for the note.
+        # TODO: If there is no file: _id = 0
+        # TODO: Add new note to file in json format
         pass
 
-    @staticmethod
-    def add_note(title, note, time=None):
-        _id = 0
-        idList = []
+    @classmethod
+    def remove_note(self, _id):
+        # TODO: Load file
+        # TODO: Remove note with the given id.
+        pass
 
-        try:
-            with open('notes.json', 'r') as rw:
-                for i in rw:
-                    for "Id" in i:
-                        idList.append("Id")
-                        r = idList[ len(idList) -1 ]
-                        _id = r + 1
-        except:
-            _id = 0
+    @classmethod
+    def edit_note(self, _id, title, note):
+        # TODO: Load file
+        # TODO: Edit note with the given id.
+        pass
 
-with open('notes.json', 'a') as fw:
-    if time == None:
-        time = "na"
+    @classmethod
+    def list_single_note(self, _id):
+        # TODO: Load file
+        # TODO: Display note with the given id.
+        pass
 
-    note = {"Id": _id,
-            "Title": title,
-            "Note": note,
-            "Notification time": time}
-
-    fw.write(json.dump(note, fw))
-fw.close()
-
-def remove_note(self):
-    pass
-
-def edit_note(self):
-    pass
-
+    @classmethod
+    def list_all_notes(self):
+        # TODO: Load file
+        # TODO: Show all the things!! \(^0^)/
+        pass

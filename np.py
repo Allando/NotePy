@@ -8,21 +8,12 @@ def main():
 
     n = notes.Notes
     if choice == "1":
-        # Get all the data
-        title = input("Title: ")
-        note = input("Note:\n> ")
-        while note != "":
-            note = input("> ")
-        n_time = input("Notification time [d:m:y] ")
-        if n_time == "":
-            n_time = None
-
-        n.add_note(title, note, n_time)
+        pass
     elif choice == "2":
-        n.edit_note()
+        pass
     elif choice == "3":
-        n.delete_note()
+        pass
+
 
 if __name__ == "__main__":
     main()
-
