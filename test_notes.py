@@ -17,8 +17,10 @@ class test_notes(unittest.TestCase):
         # File handling
         with self.assertRaises(FileNotFoundError):
             open('failtest.json', 'r')
+        with self.assertRaises(FileNotFoundError):
+            open('', 'r')
 
-        
+
 
 
     def test_remove_note(self):
