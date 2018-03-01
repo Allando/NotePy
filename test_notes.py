@@ -8,10 +8,18 @@ from notes import Notes
 
 class test_notes(unittest.TestCase):
     def test_add_note(self):
+        # Title - Note limitations
         self.assertEqual(Notes.add_note('Message test', 'hello, there'), True)
         self.assertEqual(Notes.add_note('A message to bob', ''), True)
         self.assertEqual(Notes.add_note('', 'ayy'), False)
         self.assertEqual(Notes.add_note('', ''), False)
+
+        # File handling
+        with self.assertRaises(FileNotFoundError):
+            open('failtest.json', 'r')
+
+        
+
 
     def test_remove_note(self):
         self.assertEqual(Notes.remove_note('1'), True)
