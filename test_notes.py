@@ -20,9 +20,6 @@ class test_notes(unittest.TestCase):
         with self.assertRaises(FileNotFoundError):
             open('', 'r')
 
-
-
-
     def test_remove_note(self):
         self.assertEqual(Notes.remove_note('1'), True)
         self.assertEqual(Notes.remove_note('999'), False)
