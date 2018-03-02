@@ -5,4 +5,3 @@ with open("Note.json", "r") as f:
     for i in jsone['notes']:
         print(i['Title'])
 
-#
